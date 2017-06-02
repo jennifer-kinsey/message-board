@@ -1,5 +1,6 @@
 <div class="row">
   {{message.title}}
   Asked by {{message.poster}}
-  <button {{action 'delete' rental}}>Delete Question</button>
+  {{update-message message=message update="update"}}
+  <button {{action 'delete' message}}>Delete Question</button>
 </div>
