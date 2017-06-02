@@ -1,0 +1,20 @@
+
+<!-- Include a header and/or navbar that appears on all pages. It should contain the name of your site and a link to the home page, and other content such as social media, LinkedIn, etc. -->
+
+<header class="jumbotron">
+  <h1>Chick It Out</h1>
+  <nav>
+    {{#link-to 'index'}}Questions{{/link-to}}
+    {{#link-to 'about'}}About{{/link-to}}
+    <a href="https://news.google.com/">News</a>
+  </nav>
+</header>
+
+<div class="container">
+  {{outlet}}
+</div>
+
+
+<footer>
+  footer stuff here
+</footer>
