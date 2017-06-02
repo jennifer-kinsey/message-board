@@ -1,0 +1,30 @@
+.header{
+  background-color: #2096BA;
+  background-image: url('/img/eyes.png');
+  background-size: 100% auto;
+}
+
+.header h1{
+  text-align: center;
+  color: #E7B183;
+  color: #C5D2DB;
+}
+
+nav a {
+  color: white;
+  padding: 20px;
+  margin-bottom: 0;
+}
+
+nav a:first-child{
+  padding-left: 65px;
+}
+
+body{
+  background-color: #C5919D;
+}
+
+.footer{
+  background-color: #C5D2DB;
+  margin-bottom: 0;
+}
