@@ -1,15 +1,23 @@
 <div class="row">
-  <div class="message-header">
-    <div class="message-title">
-      {{message.title}}
+  <div class="message">
+    <div class="message-header">
+      <div class="message-title">
+        {{message.title}}
+      </div>
+      {{message.date}} {{message.time}}
     </div>
-    {{message.date}} {{message.time}}
+    <div class="message-body">
+      {{message.body}}
+    </div>
+    <div class="message-code">
+      {{message.code}}
+    </div>
+    <button {{action 'delete' message}}>Delete Question</button>
   </div>
-  <div class="message-body">
-    {{message.body}}
+  <div class="response">
+    <h2>Answers: ({{message.responses.length}})</h2>
+    {{#each message.responses as |response|}}
+      {{response-tile response=response destroyResponse="destroyResponse"}}
+    {{/each}}
   </div>
-  <div class="message-code">
-    {{message.code}}
-  </div>
-  <button {{action 'delete' message}}>Delete Question</button>
 </div>

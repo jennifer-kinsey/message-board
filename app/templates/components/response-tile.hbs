@@ -1,0 +1,13 @@
+<br>
+<div class="response-header">
+  User: {{response.responder}}<br>
+  Date: {{response.date}} {{response.time}}
+</div>
+<div class="response-answer">
+  Answer: {{response.answer}}
+</div>
+<div class="response-code">
+  Code: {{response.code}}
+</div>
+<button {{action 'delete' response}}>Delete Answer</button>
+<hr>
