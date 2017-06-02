@@ -2,4 +2,10 @@
 
 <p>We hope you find the answer to all your coding questions here. If not, just ask one.</p>
 
+<div class="message-board">
+  {{#each model as |message|}}
+    {{message-tile message=message}}
+  {{/each}}
+</div>
+
 {{#link-to 'about'}}About{{/link-to}}

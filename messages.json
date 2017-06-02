@@ -1,0 +1,84 @@
+{ "messages": [{
+    "poster": "Kinsey",
+    "date": "May 30, 2017",
+    "time": "2:10pm",
+    "title": "Apache Flume: MongoDB Sink",
+    "body": "i  am trying to test this library for MongoDB sink. I dont know why Apache Flume cannot find the sink class:",
+    "code": "org.apache.flume.FlumeException: Unable to load sink type: org.riderzen.flume.sink.MongoSink, class: org.riderzen.flume.sink.MongoSink
+    at org.apache.flume.sink.DefaultSinkFactory.getClass(DefaultSinkFactory.java:70)
+    at org.apache.flume.sink.DefaultSinkFactory.create(DefaultSinkFactory.java:43)
+    at org.apache.flume.node.AbstractConfigurationProvider.loadSinks(AbstractConfigurationProvider.java:408)
+    at org.apache.flume.node.AbstractConfigurationProvider.getConfiguration(AbstractConfigurationProvider.java:102)
+    at org.apache.flume.node.PollingPropertiesFileConfigurationProvider$FileWatcherRunnable.run(PollingPropertiesFileConfigurationProvider.java:141)
+    at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+    at java.util.concurrent.FutureTask.runAndReset(FutureTask.java:304)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$301(ScheduledThreadPoolExecutor.java:178)
+    at java.util.concurrent.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+    at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+    at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+    at java.lang.Thread.run(Thread.java:745)
+    Caused by: java.lang.ClassNotFoundException: org.riderzen.flume.sink.MongoSink
+    at java.net.URLClassLoader$1.run(URLClassLoader.java:366)
+    at java.net.URLClassLoader$1.run(URLClassLoader.java:355)
+    at java.security.AccessController.doPrivileged(Native Method)
+    at java.net.URLClassLoader.findClass(URLClassLoader.java:354)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:425)
+    at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:308)
+    at java.lang.ClassLoader.loadClass(ClassLoader.java:358)
+    at java.lang.Class.forName0(Native Method)
+    at java.lang.Class.forName(Class.java:195)"
+  }, {
+    "poster": "Sarah",
+    "date": "May 31, 2017",
+    "time": "3:25pm",
+    "title": "Replacing Webpack with Lite-Server in Angular2",
+    "body": "I created a new project using angular-cli ,by default it installs webpack.But I want to uninstall webpack and replace with lite-server.npm uninstall webpack doesnt uninstall webpac .I installed lite-server but still the server starts in webpack.How can I replace webpack with lite-server?",
+    "code": "n/a"
+  }, {
+    "poster": "Nicky",
+    "date": "May 31, 2017",
+    "time": "7:20pm",
+    "title": "Copy and paste from a data validation list",
+    "body": "I have written the below code. I have 3 worksheets: Dashboard, Workings and Data. I have a data validation list on worksheet(dashboard) which has a long list of companies. I want to be able to select a company from the list press a button and that matches from a company list in the worksheet data which has lots of other columns for corresponding data for that company. I want to be able to take certain data from the company chosen and paste it into the next available row in worksheet (workings). The list in the worksheet (data) has multiple entries for the same company, hence why I have added a loop in.
+    This code does no give an error but does not give any result.
+    Can someone please tell me where Im going wrong
+    Many thanks",
+    "code": "Sub pull_data()
+    Application.Calculation = xlCalculationManual
+    Application.ScreenUpdating = False
+    Application.EnableCancelKey = xlDisabled
+    CompanyListLocation = Worksheets(Dashboard).Cells(2, 4).Value
+    Company = Worksheets(Data).Cells(CompanyListLocation, 1).Value
+    For x = 2 To 1000000
+    If Worksheets(Data).Cells(x, 5).Value = CompanyListLocation Then
+    Cells(x, 5).Copy
+    Worksheets(Workings).Cells(Rows.Count, 1).End(xlUp).Offset(1, 0).PasteSpecial xlPasteValues
+    Cells(x, 14).Copy
+    Worksheets(Workings).Cells(Rows.Count, 1).End(xlUp).Offset(1, 0).PasteSpecial xlPasteValues
+    Cells(x, 15).Copy
+    Worksheets(Workings).Cells(Rows.Count, 1).End(xlUp).Offset(1, 0).PasteSpecial xlPasteValues
+
+    End If
+
+    Next x
+
+    End Sub"
+  }, {
+    "poster": "Asia",
+    "date": "June 1, 2017",
+    "time": "12:23 AM",
+    "title": "Using CASE with MATCH",
+    "body": "I have a simple query looking for a common node x related to many starting nodes a,b,c. If there is no common node x for a,b,c then I want to compare just a,b and b,c for common nodes y and z respectively. This is how I imagine it should look... but of course does not work. I am looking at using CASE to reduce redundancy and speed up the query since there is no need to search in pairs a,b b,c if a common x is found. How do you use CASE to create a MATCH. Perhaps there is a better way than using CASE?
+    Thanks!",
+    "code": "MATCH p1=(a)-[]->(x) WHERE a.n=1
+    WITH p1,a,x
+    MATCH p2=(b)-[]->(x) WHERE b.n=2
+    WITH p1,p2,a,b,x
+    MATCH p3=(c)-[]->(x) WHERE c.n=3
+    WITH p1,p2,p3,a,b,c,x
+    MATCH CASE WHEN x IS NULL THEN p4=(a)-[]->(y)<-[]-(b) WHERE a.n=1 AND b.n=2 END
+    WITH p1,p2,p3,p4,a,b,c,y
+    MATCH CASE WHEN x IS NULL THEN p5=(b)-[]->(z)<-[]-(c) WHERE b.n=2 AND c.n=3 END
+    RETURN p1,p2,p3,p4,p5,x,y,z"
+  }]
+}
