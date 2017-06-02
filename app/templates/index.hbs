@@ -4,8 +4,10 @@
 
 <div class="message-board">
   {{#each model as |message|}}
-    {{message-tile message=message}}
+    {{message-tile message=message destroyMessage="destroyMessage"}}
   {{/each}}
 </div>
+
+{{new-message saveMessage="saveMessage"}}
 
 {{#link-to 'about'}}About{{/link-to}}
