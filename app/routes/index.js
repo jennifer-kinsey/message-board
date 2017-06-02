@@ -11,10 +11,5 @@ export default Ember.Route.extend({
       newMessage.save();
       this.transitionTo('index');
     },
-
-    destroyMessage(message) {
-      message.destroyRecord();
-      this.transitionTo('index');
-    }
   }
 });

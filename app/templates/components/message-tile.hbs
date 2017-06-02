@@ -1,6 +1,5 @@
 <div class="row">
-  {{message.title}}
+  {{#link-to 'message' message.id}}{{message.title}}{{/link-to}}
   Asked by {{message.poster}}
   {{update-message message=message update="update"}}
-  <button {{action 'delete' message}}>Delete Question</button>
 </div>

@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="message-header">
+    <div class="message-title">
+      {{message.title}}
+    </div>
+    {{message.date}} {{message.time}}
+  </div>
+  <div class="message-body">
+    {{message.body}}
+  </div>
+  <div class="message-code">
+    {{message.code}}
+  </div>
+  <button {{action 'delete' message}}>Delete Question</button>
+</div>
