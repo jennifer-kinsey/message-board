@@ -2,6 +2,11 @@
 
 This is a message board web app which allows users to post questions and answers. The theme for the message board is basically a women's StackOverflow with the name Chick It Out.
 
+## Screenshot
+
+![screen shot 2017-06-02 at 7 01 23 pm](https://cloud.githubusercontent.com/assets/26371824/26749875/f48d0826-47c9-11e7-83e5-3fb17288133c.png)
+
+
 ## Prerequisites
 
 You will need the following things properly installed on your computer.
