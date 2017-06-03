@@ -88,3 +88,8 @@ textarea {
     height: 5em;
     width: 25em;
 }
+
+.center{
+  display: block;
+  margin: 20px auto;
+}
