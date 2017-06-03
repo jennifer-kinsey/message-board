@@ -16,15 +16,15 @@
       </div>
       <div class="form-group">
         <label for="answer">Answer</label>
-        {{input value=answer id="answer"}}
+        {{textarea input value=answer id="answer"}}
       </div>
       <div class="form-group">
         <label for="code">Code</label>
-        {{input value=code id="code"}}
+        {{textarea input value=code id="code"}}
       </div>
       <button {{action 'saveResponse'}}>Save</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'responseFormShow'}}>Add an Answer</button>
+  <button class="btn btn-default" {{action 'responseFormShow'}}>Add an Answer</button>
 {{/if}}

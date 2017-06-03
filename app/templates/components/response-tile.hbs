@@ -6,8 +6,9 @@
 <div class="response-answer">
   Answer: {{response.answer}}
 </div>
+Code:
 <div class="response-code">
-  Code: {{response.code}}
+   {{response.code}}
 </div>
-<button {{action 'delete' response}}>Delete Answer</button>
+<button class="btn btn-default" {{action 'delete' response}}>Delete Answer</button>
 <hr>

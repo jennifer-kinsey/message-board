@@ -1,13 +1,19 @@
-.header{
+body {
+  background-color: #C5919D;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header {
   background-color: #2096BA;
   background-image: url('/img/eyes.png');
   background-size: 100% auto;
 }
 
-.header h1{
+.header h1 {
   text-align: center;
-  color: #E7B183;
+  /*color: #E7B183;*/
   color: #C5D2DB;
+  font-family: 'Audiowide', cursive;
 }
 
 nav a {
@@ -16,15 +22,69 @@ nav a {
   margin-bottom: 0;
 }
 
-nav a:first-child{
+nav a:first-child {
   padding-left: 65px;
 }
-
-body{
-  background-color: #C5919D;
+.row, .row a {
+  color: #333333;
+  font-size: 1.5em;
 }
 
-.footer{
+.row a{
+  text-decoration: underline;
+}
+
+.message, .ask {
+  background-color: #C5D2DB;
+  padding: 22px;
+}
+
+.message-body, .message-code {
+  font-size: 1em;
+}
+
+.message-code, .response-code{
+  background-color: white;
+  font-family: 'Exo 2', sans-serif;
+  margin-bottom: 20px;
+  padding-left: 10px;
+  margin-left: 10px;
+}
+
+.response {
+  background-color: #ededed;
+  padding: 22px;
+  margin-bottom: 20px;
+}
+
+.ask {
+  margin-bottom: 20px;
+}
+
+.btn {
+  margin-bottom: 15px;
+}
+
+.footer {
   background-color: #C5D2DB;
   margin-bottom: 0;
+}
+
+.github {
+  width:125px;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer p {
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;at
+
+}
+
+textarea {
+    height: 5em;
+    width: 25em;
 }

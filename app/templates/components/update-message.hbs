@@ -19,22 +19,22 @@
 
       <div class="form-group">
         <label for="title">Question Subject</label>
-        {{input value=title id="title" placeholder=message.title}}
+        {{textarea input value=title id="title" placeholder=message.title}}
       </div>
 
       <div class="form-group">
         <label for="body">Question:</label>
-        {{input value=body id="body" placeholder=message.body}}
+        {{textarea input value=body id="body" placeholder=message.body}}
       </div>
 
       <div class="form-group">
         <label for="code">Code you've tried:</label>
-        {{input value=code id="code" placeholder=message.code}}
+        {{textarea input value=code id="code" placeholder=message.code}}
       </div>
 
-      <button {{action 'update' message}}>Save Update</button>
+      <button class="btn btn-default" {{action 'update' message}}>Save Update</button>
     </form>
   </div>
 {{else}}
-  <button {{action 'updateMessageForm'}}>Update Question</button>
+  <button class="btn btn-default" {{action 'updateMessageForm'}}>Update Question</button>
 {{/if}}
